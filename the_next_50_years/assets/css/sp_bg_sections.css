@@ -29,3 +29,13 @@
 #joannazylinska {
     background: radial-gradient(magenta, #222);
 }
+
+#fleischmann {
+    background: radial-gradient(dimgray, #222);
+}
+
+#keywords {
+    background: radial-gradient(black, #333);
+    width: 100%;
+    min-height: 100vh;
+}
