@@ -31,11 +31,17 @@
 }
 
 #fleischmann {
-    background: radial-gradient(dimgray, #222);
+    background: radial-gradient(thistle, #222);
 }
 
 #keywords {
     background: radial-gradient(black, #333);
+    width: 100%;
+    min-height: 100vh;
+}
+
+#about {
+    background: radial-gradient(black, #222);
     width: 100%;
     min-height: 100vh;
 }
