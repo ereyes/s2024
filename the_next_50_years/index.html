@@ -1,7 +1,9 @@
 <!-- ****
   The Next 50 Years - SIGGRAPH 2024 Special Project
   Everardo Reyes
-  Initially followed the template GP by BootstrapMade.com, Mar 17 2024, created with Bootstrap v5.3.3 https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  Initially followed the template GP by BootstrapMade.com, Mar 17 2024, 
+  created with Bootstrap v5.3.3 
+  https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
 **** -->
 
 <!DOCTYPE html>
@@ -148,13 +150,14 @@
                 <p class="text-participants">Annick <strong>Bureaud</strong></p>
                 <p class="text-participants"><a href="#ernestedmonds"> Ernest <strong>Edmonds</strong></a></p>
                 <p class="text-participants"> <a href="#davidem"> David <strong>Em</strong></a></p>
-                <p class="text-participants"> <a href="#fleischmann"> Monika <strong>Fleischmann</strong> & <br> Wolfgang <strong>Strauss</strong></a></p>
             </div>
             <div class="col-lg-3 col-10">
+              <p class="text-participants"> <a href="#fleischmann"> Monika <strong>Fleischmann</strong> & <br> Wolfgang <strong>Strauss</strong></a></p>
               <p class="text-participants"><a href="#brendalaurel">Brenda <strong>Laurel</strong></a></p>
               <p class="text-participants">Richard <strong>Lowenberg</strong></p>
               <p class="text-participants">Aaron <strong>Marcus</strong></p>
-              <p class="text-participants">Nick <strong>Montfort</strong></p>
+              <p class="text-participants"><a href="#nickmontfort">Nick <strong>Montfort</strong></a></p>
+              <p class="text-participants">Bill <strong>Seaman</strong></p>
             </div>
             <div class="col-lg-3 col-10">
               <p class="text-participants"><a href="#alvyraysmith">Alvy Ray <strong>Smith</strong></a></p>
@@ -527,6 +530,21 @@
       </div>
     </section> <!-- ======= End of Monika Fleischmann and Wolfgang Strauss Section ======= -->
 
+    <div class="separator"></div>
+
+    <!-- ======= Nick Montfort Section ======= -->
+    <section id="nickmontfort" class="counts text-white d-flex justify-content-center align-items-center vh-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8 col-lg-3 pt-4 order-1 order-lg-1 text-end">
+            <iframe src="nickm_next_50.html" frameborder="0"></iframe>
+            <p class="fs-2">- Nick <strong>Montfort</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= End of Nick Montfort Section ======= -->
+
   </main><!-- End #main -->
 
   <div class="separator-gradient"></div>
@@ -575,6 +593,7 @@
             <p class="text-participants mb-5"><a class="link-gradient" href="#brendalaurel">Brenda <strong>Laurel</strong></a> is a researcher, writer, consultant, teacher, and performer. She is adjunct professor in Computer Science Department at U. C. Santa Cruz. More info: <a href="http://www.tauzero.com/Brenda_Laurel/BrendaBio.html">www.tauzero.com</a></p>
             <p class="text-participants mb-5">Richard <strong>Lowenberg</strong> is an artist, planner/designer and eco-cultural activist. He was director of the Bio-Arts Lab, Bay Area (1974-1984) and founded 1st-Mile Institute, Santa Fe, in 2006. More info: <a href="http://www.richardlowenberg.com/">www.richardlowenberg.com</a></p>
             <p class="text-participants mb-5">Aaron <strong>Marcus</strong> is user-interface and information-visualization designer, as well as a computer graphics artist. More info: <a href="https://en.wikipedia.org/wiki/Aaron_Marcus">en.wikipedia.org/wiki/Aaron_Marcus</a></p>
+            <p class="text-participants mb-5"><a class="link-gradient" href="#nickmontfort">Nick <strong>Montfort</strong></a> is a poet and artist, a scholar, researcher, and educator. He is professor of digital media at MIT and principal investigator in the Center for Digital Narrative at the University of Bergen. More info: <a href="https://nickm.com/">nickm.com</a></p>
             <p class="text-participants mb-5"><a class="link-gradient" href="#alvyraysmith">Alvy Ray <strong>Smith</strong></a> cofounded Pixar and Altamira. First director of computer graphics at Lucasfilm. Founding member of the SIGGRAPH Academy. He received two technical Academy Awards, for the alpha channel and digital paint systems. More info: <a href="http://alvyray.com">alvyray.com</a></p>
             <p class="text-participants mb-5"><a class="link-gradient" href="#sommerer">Christa <strong>Sommerer</strong> & Laurent <strong>Mignonneau</strong></a> are internationally renowned media artists, researchers and pioneers of interactive art. In 2004 they set up the department for Interface Cultures at the University of Art and Design in Linz, Austria where they are both professors. More info: <a href="http://www.interface.ufg.ac.at/christa-laurent/">www.interface.ufg.ac.at/christa-laurent</a></p>
             <p class="text-participants mb-5"> <a class="link-gradient" href="#wolf">Valerie <strong>Wolf Gang</strong></a> is a multimedia artist, film director, videographer, transdisciplinary arts researcher, and mentor. Ph.D. candidate at Slovenian Academy of Science and Arts and professional associate at The Institute for Fine Arts Vienna, collaborating with the Academy of Fine Arts Vienna. More info: <a href="https://valeriewolfgang.com">valeriewolfgang.com</a></p>
@@ -621,6 +640,40 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    var grammar = {};
+    const lines = `S-PROPERTY+ belongs to +US+, we’ll +MORE+.
+  PROPERTY-Generativity|Interactivity|Programmability|Responsiveness|“View Source”
+  US-all of us|everyone|exlorers|hackers|humans|the people|us|us all
+  MORE-ADVANCE+ it|ADVANCE+ it +MANNER|ADVANCE+ and +ADVANCE+ it|PERSIST
+  ADVANCE-advance|amplify|develop|elaborate|expand|foster|unfurl
+  MANNER-accessibly|beautifully|compellingly|lucidly|openly|powerfully
+  PERSIST-bring it onwards|carry on|keep it going|make it the future`;
+    function expand(token, rest) {
+      if (Object.hasOwn(grammar, token)) {
+        alternatives = grammar[token].split('|');
+        pick = alternatives[~~(Math.random() * alternatives.length)];
+        if(pick.includes('+')) {
+          components = pick.split('+');
+          return expand(components[0], components.slice(1).concat(rest))
+        }
+        return expand(pick, []) + 
+            ((+rest != 0) ? expand(rest[0], rest.slice(1)) : '')
+      }
+      return token + ((+rest!=0) ? expand(rest[0], rest.slice(1)) : '')
+    }
+    for (line of lines.split(/\n/)) {
+      grammar[line.split(/-/)[0]] = line.split(/-/)[1];
+    }
+    function generate() { 
+      montfort.innerHTML = 
+        '<i class="fa fa-quote-left" aria-hidden="true"></i>' + 
+        expand('S', []) +
+        '<i class="fa fa-quote-right" aria-hidden="true"></i>';
+    }
+    generate();
+    </script>
 
 </body>
 
