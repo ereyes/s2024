@@ -31,7 +31,7 @@
 }
 
 #fleischmann {
-    background: radial-gradient(thistle, #222);
+    background: radial-gradient(rgb(31, 144, 137), #222);
 }
 
 #keywords {
@@ -75,11 +75,9 @@
 }
 
 #YoichiroKawaguchi {
-    background: radial-gradient(rgb(3, 82, 226), #222);
+    background: radial-gradient(navy, #222);
 }
 
 #richardchuang {
     background: radial-gradient(darkslategray, #222);
 }
-
-
