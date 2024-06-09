@@ -1,0 +1,31 @@
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .column {
+            flex: 1;
+            min-width: 200px;
+            margin: 5px;
+            font-size: inherit;
+        }
+        .column-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .highlight {
+            color: rgb(243, 205, 54);
+        }
+        @media (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+                font-size:50%;
+            }
+        }
