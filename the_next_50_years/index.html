@@ -43,6 +43,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/sp_style.css" rel="stylesheet">
   <link href="assets/css/sp_bg_sections.css" rel="stylesheet">
+
+  <script src="assets/js/keywords.js"></script>
+  <link rel="stylesheet" href="assets/css/keywords.css">
   
 </head>
 
@@ -147,7 +150,7 @@
 
         <div class="row text-white roboto-regular justify-content-center gx-5">
 
-            <div class="col-lg-3 col-10">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-10">
                 <p class="text-participants"> <a href="#royascott"> Roy <strong>Ascott</strong></a></p>
                 <p class="text-participants"><a href="#paulbrown">Paul <strong>Brown</strong></a></p>
                 <p class="text-participants"><a href="#annickbureaud"> Annick <strong>Bureaud</strong></a></p>
@@ -156,7 +159,7 @@
                 <p class="text-participants"> <a href="#davidem"> David <strong>Em</strong></a></p>
                 <p class="text-participants"> <a href="#behnazfarahi"> Behnaz <strong>Farahi</strong></a></p>
             </div>
-            <div class="col-lg-3 col-10">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-10">
               <p class="text-participants"> <a href="#fleischmann"> Monika <strong>Fleischmann</strong> & <br> Wolfgang <strong>Strauss</strong></a></p>
               <p class="text-participants"> <a href="#YoichiroKawaguchi"> Yoichiro <strong>Kawaguchi</strong></a></p>              
               <p class="text-participants"><a href="#brendalaurel">Brenda <strong>Laurel</strong></a></p>
@@ -164,7 +167,7 @@
               <p class="text-participants"> <a href="#rogermalina"> Roger <strong>Malina</strong></a></p>
               <p class="text-participants"> <a href="#aaronmarcus"> Aaron <strong>Marcus</strong></a></p>
             </div>
-            <div class="col-lg-3 col-10">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-10">
               <p class="text-participants"><a href="#nickmontfort">Nick <strong>Montfort</strong></a></p>
               <p class="text-participants"> <a href="#billseaman"> Bill <strong>Seaman</strong></a></p>
               <p class="text-participants"><a href="#alvyraysmith">Alvy Ray <strong>Smith</strong></a></p>
@@ -971,9 +974,57 @@
   <section id="keywords" class="text-white">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-8 col-lg-5 text-center">
+        <div class="col-8 col-lg-5 text-center mb-4">
           <h3>Map of keywords</h3>
-          <p>Coming soon.</p>
+          <p>Explore the topics and subtopics of the messages. <br>
+            Click on any text to see associated categories in the different columns. 
+          </p>
+        </div>
+        <div class="row justify-content-center vollkorn-regular">
+          <div class="col-2">
+            <div class="column" id="sectionColumn">
+              <div class="column-header">
+                  <a href="javascript:sortColumn('section')">
+                    <span>Section</span>
+                    <i class="fa-solid fa-sort"></i>
+                  </a>
+              </div>
+              <ul id="sectionList"></ul>
+          </div>            
+          </div>
+          <div class="col-3">
+            <div class="column" id="personColumn">
+              <div class="column-header">                  
+                  <a href="javascript:sortColumn('person')">
+                    <span>Person</span>
+                    <i class="fa-solid fa-sort"></i>
+                  </a>
+              </div>
+              <ul id="personList"></ul>
+          </div>
+          </div>
+          <div class="col-4">
+            <div class="column" id="topicColumn">
+              <div class="column-header">                  
+                  <a href="javascript:sortColumn('topic')">
+                    <span>Topic</span>
+                    <i class="fa-solid fa-sort"></i>
+                  </a>
+              </div>
+              <ul id="topicList"></ul>
+          </div>
+          </div>
+          <div class="col-3">
+            <div class="column" id="subtopicColumn">
+              <div class="column-header">                  
+                  <a href="javascript:sortColumn('subtopic')">
+                    <span>Subtopic</span>
+                    <i class="fa-solid fa-sort"></i>
+                  </a>
+              </div>
+              <ul id="subtopicList"></ul>
+          </div>
+          </div>
         </div>
       </div>
     </div>
