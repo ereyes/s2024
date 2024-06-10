@@ -19,8 +19,12 @@
             list-style-type: none;
             padding: 0;
         }
+        li {
+            opacity: 0.5;
+        }
         .highlight {
             color: rgb(243, 205, 54);
+            opacity: 1;
         }
         @media (max-width: 600px) {
             .column {
