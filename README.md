@@ -9,5 +9,5 @@ This space contains the files and live versions of some special projects.
 - **SIGGRAPH Spotlight Podcast episode 78**
   - Blog post: https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/
 
-- **Data visualizations**
-  - Coming Soon.
+- **Visual Program of the Conference**
+  - Live: https://ereyes.github.io/s2024/the_next_50_years/visual_program/names.html
