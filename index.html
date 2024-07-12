@@ -32,7 +32,7 @@
 
   <style>
     body {
-      background: linear-gradient(to right, #e64341, #f6e734, #fff, #41bde9, #2c3986);
+      background:radial-gradient(circle at 50% 50%, rgba(60,60,60,0.8), rgba(5,5,5,0.9));
       background-size: cover;
       color: #fff;
       font-family: "Roboto", sans-serif;
@@ -46,7 +46,7 @@
       text-decoration: none;
       margin: 20px 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.5);
+      /*background: rgba(255, 255, 255, 0.5);*/
       padding: 20px;
       border-radius: 10px;
       text-align: center;
@@ -56,7 +56,6 @@
     }
     .content a:hover {
       color: #fff;
-      background: rgba(0, 0, 0, 0.5);
     }
     .content a i {
       font-size: 2em;
@@ -71,48 +70,66 @@
     .nav-link:hover {
         color:gold;
     }
+    .gradient_01 {
+      background-image: linear-gradient(to right, rgb(229, 67, 64), rgb(234, 119, 60));
+    }
+    .gradient_02 {
+        background-image: linear-gradient(to right, rgb(234, 119, 60), rgb(245, 229, 50));
+    }
+    .gradient_03 {
+        background-image: linear-gradient(to right, rgb(245, 229, 50), rgb(235, 230, 178));
+    }
+    .gradient_04 {
+        background-image: linear-gradient(to right, rgb(125, 202, 231), rgb(56, 138, 194));
+    }
+    .gradient_05 {
+        background-image: linear-gradient(to right, rgb(56, 138, 194), rgb(47, 76, 148));
+    }
+    .gradient_06 {
+      background-image: linear-gradient(to right, rgb(47, 76, 148), rgb(44, 56, 133));
+    }
   </style>
 </head>
 <body>
   <div class="container content">
     <div class="row">
       <div class="col-md-6 mb-4">
-        <a href="https://ereyes.github.io/s2024/the_next_50_years/">
+        <a href="https://ereyes.github.io/s2024/the_next_50_years/" class="gradient_01">
           <i class="fa-solid fa-quote-left"></i>
           <p class="roboto-regular"><strong>The Next 50 Years</strong></p>
           <p class="vollkorn-regular">Explore messages and visions shared with us.</p>
         </a>
       </div>
       <div class="col-md-6 mb-4">
-        <a href="https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/">
+        <a href="https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/" class="gradient_02">
           <i class="fas fa-podcast"></i>
           <p class="roboto-regular"><strong>SIGGRAPH Spotlight Podcast</strong></p>
           <p class="vollkorn-regular">Featuring a conversation with David Em and Aaron Marcus</p>
         </a>
       </div>
       <div class="col-md-6 mb-4">
-        <a href="https://ereyes.github.io/s2024/visual_program/names.html">
+        <a href="https://ereyes.github.io/s2024/visual_program/names.html" class="gradient_03">
           <i class="fa-solid fa-id-card-clip"></i>
           <p class="roboto-regular"><strong>Names in the Conference</strong></p>
           <p class="vollkorn-regular">Do you see your name? Your friend? Your advisor?</p>
         </a>
       </div>
       <div class="col-md-6 mb-4">
-        <a href="https://ereyes.github.io/s2024/visual_program/stream.html">
+        <a href="https://ereyes.github.io/s2024/visual_program/stream.html" class="gradient_04">
           <i class="fa-solid fa-water"></i>
           <p class="roboto-regular"><strong>Stream of Names</strong></p>
           <p class="vollkorn-regular">A fun animation with the text of names.</p>
         </a>
       </div>
       <div class="col-md-6 mb-4">
-        <a href="https://ereyes.github.io/s2024/visual_program/keywords.html">
+        <a href="https://ereyes.github.io/s2024/visual_program/keywords.html" class="gradient_05 text-white">
           <i class="fa-solid fa-tag"></i>
           <p class="roboto-regular"><strong>Keywords</strong></p>
           <p class="vollkorn-regular">We extracted the keywords from all the talks, papers, panels, and films.</p>
         </a>
       </div>
       <div class="col-md-6 mb-4">
-        <a href="https://ereyes.github.io/s2024/visual_program/rain.html">
+        <a href="https://ereyes.github.io/s2024/visual_program/rain.html" class="gradient_06 text-white">
           <i class="fa-solid fa-cloud-rain"></i>
           <p class="roboto-regular"><strong>Rain of Keywords</strong></p>
           <p class="vollkorn-regular">This animation will refresh your exploration and soak your ideas.</p>
