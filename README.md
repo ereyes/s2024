@@ -10,5 +10,5 @@ This space contains the files and live versions of some special projects.
   - Blog post: https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/
 
 - **Visual Program of the Conference**
-  - Live: https://ereyes.github.io/s2024/the_next_50_years/visual_program/names.html
+  - Live: https://ereyes.github.io/s2024/the_next_50_years/visual_program/index.html
   - Code: https://github.com/ereyes/s2024/tree/main/visual_program
