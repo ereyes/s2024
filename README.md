@@ -11,3 +11,4 @@ This space contains the files and live versions of some special projects.
 
 - **Visual Program of the Conference**
   - Live: https://ereyes.github.io/s2024/the_next_50_years/visual_program/names.html
+  - Code: https://github.com/ereyes/s2024/tree/main/visual_program
