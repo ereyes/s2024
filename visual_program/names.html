@@ -168,7 +168,7 @@
 
         function displayRelatedContent(contributor, data) {
             let relatedContent = document.getElementById('related-content');
-            relatedContent.innerHTML = `<h3 class="vollkorn-regular display-4"><i class="fa-solid fa-id-card-clip"></i>&nbsp;${contributor}</h3><br>`;
+            relatedContent.innerHTML = `<h3 class="vollkorn-regular"><i class="fa-solid fa-id-card-clip"></i>&nbsp;${contributor}</h3><br>`;
             data.forEach(item => {
                 let contentDiv = document.createElement('div');
                 contentDiv.innerHTML = `<h6><strong>${item.sub_Title}</strong></h6>
