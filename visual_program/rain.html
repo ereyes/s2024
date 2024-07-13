@@ -225,7 +225,7 @@
 
         function displayRelatedContent(keyword, data) {
             let relatedContent = document.getElementById('related-content');
-            relatedContent.innerHTML = `<h3 class="vollkorn-regular"><i class="fa-solid fa-tag"></i>&nbsp;${keyword}</h3><br>`;
+            relatedContent.innerHTML = `<h1 class="vollkorn-regular"><i class="fa-solid fa-tag"></i>&nbsp;${keyword}</h1><br>`;
             data.forEach(item => {
                 let contentDiv = document.createElement('div');
                 contentDiv.innerHTML = `<h6><strong>${item.sub_Title}</strong></h6>
