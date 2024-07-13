@@ -15,7 +15,7 @@
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
@@ -37,6 +37,7 @@
         }
         .panel-content {
             padding: 20px;
+            padding-left: 5px;
             scrollbar-width: none;
             overflow-y:hidden;
         }
@@ -51,6 +52,9 @@
             font-weight: 400;
             font-style: normal;
         } 
+        #left-panel {
+            background-image: linear-gradient(#444,#222);
+        }
         #keywords-list {
             position: relative;
             height: 100%;
@@ -81,12 +85,12 @@
 <body>
     <div class="container-fluid full-height">
         <div class="row full-height">
-            <div class="col-7 col-md-9 d-flex flex-column align-top scrollable bg-dark" id="left-panel">
+            <div class="col-9 col-md-9 d-flex flex-column align-top scrollable bg-dark" id="left-panel">
                 <div class="panel-content vollkorn-regular">
                     <div id="keywords-list"></div>
                 </div>
             </div>
-            <div class="col-5 col-md-3 d-flex flex-column align-top scrollable" id="right-panel">
+            <div class="col-3 col-md-3 d-flex flex-column align-top scrollable" id="right-panel">
                 <div class="panel-content">
                     <div id="related-content" class="roboto-regular"></div>
                 </div>
