@@ -40,7 +40,8 @@
             overflow-y: auto;
         }
         .panel-content {
-            padding: 20px;
+            padding-top: 20px;
+            padding-left:5px;
             max-height: calc(100vh); /* Adjust based on navbar height */
             overflow-y: auto;
             scrollbar-width: none;
@@ -57,7 +58,7 @@
             font-style: normal;
         } 
         #right-panel {
-
+            background-color: #eee;
         }
         #keywords-list {
 
@@ -73,13 +74,13 @@
         }
         #related-content {
             font-size:0.8em;
-        }        
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid full-height">
         <div class="row full-height">
-            <div class="col-6 col-md-6 d-flex flex-column align-top scrollable bg-dark" id="left-panel">
+            <div class="col-8 col-md-8 d-flex flex-column align-top scrollable bg-dark" id="left-panel">
                 <div class="mt-4">
                     <h4 class="text-white roboto-regular">Scroll to navigate the names...</h4>
                 </div>
@@ -87,7 +88,7 @@
                     <div id="contributors-list" class="mb-4"></div>
                 </div>
             </div>
-            <div class="col-6 col-md-6 d-flex flex-column align-top scrollable" id="right-panel">
+            <div class="col-4 col-md-4 d-flex flex-column align-top scrollable" id="right-panel">
                 <div class="panel-content">
                     <div id="related-content" class="roboto-regular"></div>
                 </div>
@@ -208,26 +209,26 @@
             </svg>
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-              <a class="nav-link" href="https://ereyes.github.io/s2024/the_next_50_years/"><i class="fa-solid fa-quote-left"></i>&nbsp;next 50 Y</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/names.html"><i class="fa-solid fa-id-card-clip"></i>&nbsp;names</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/stream.html"><i class="fa-solid fa-water"></i>&nbsp;stream</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/keywords.html"><i class="fa-solid fa-tag"></i>&nbsp;keywords</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/rain.html"><i class="fa-solid fa-cloud-rain"></i>&nbsp;rain</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/"><i class="fas fa-podcast"></i>&nbsp;podcast</a>
-          </li>
-          </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ereyes.github.io/s2024/the_next_50_years/"><i class="fa-solid fa-quote-left"></i>&nbsp;next 50 Y</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/names.html"><i class="fa-solid fa-id-card-clip"></i>&nbsp;names</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/stream.html"><i class="fa-solid fa-water"></i>&nbsp;stream</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/keywords.html"><i class="fa-solid fa-tag"></i>&nbsp;keywords</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/rain.html"><i class="fa-solid fa-cloud-rain"></i>&nbsp;rain</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/"><i class="fas fa-podcast"></i>&nbsp;podcast</a>
+                </li>
+                </ul>
         </div>
         </div>
     </nav>
