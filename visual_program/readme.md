@@ -1,0 +1,3 @@
+- **Visual Program of the Conference**
+  - Live: https://ereyes.github.io/s2024/visual_program/index.html
+  - Code: https://github.com/ereyes/s2024/tree/main/visual_program
