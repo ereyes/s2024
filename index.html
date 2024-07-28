@@ -10,12 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGGRAPH 2024 - Special Projects</title>
-    <meta content="The Special Projects program aims to engage the diverse communities attending SIGGRAPH and help them discover interesting content across all programs." name="description">
-    <meta content="names, contributors, keywords, topics, themes, podcast, history, stories, messages, siggraph" name="keywords">
-    <meta property="og:image" content="https://raw.githubusercontent.com/ereyes/s2024/main/visual_program/sp.jpg" />
-    <meta property="og:image:width" content="1000"/>
-    <meta property="og:image:height" content="521"/>
-
     <!-- Favicons -->
     <link rel="icon" href="https://s2024.siggraph.org/wp-content/uploads/2023/10/cropped-favicon-32x32.png" sizes="32x32" />
 
@@ -62,7 +56,7 @@
             font-size: 1.6em; /* Twice the size of the default */
         }
         .nav-link {
-            color: #ccc;
+            color: #eee;
         }
         .nav-link:hover {
             color:gold;
@@ -108,8 +102,11 @@
 
         function setup() {
             createCanvas(windowWidth, windowHeight);
+            let lineSpacing = 70; // Space between lines at the top
+            let startX = (width - (lineCount - 1) * lineSpacing) / 2; // Start position to center lines horizontally
+
             for (let i = 0; i < lineCount; i++) {
-                let x = (i + 1) * width / (lineCount + 1);
+                let x = startX + i * lineSpacing;
                 lines.push({
                     x: x,
                     xNoiseOffset: random(1000),
@@ -119,7 +116,7 @@
                     frameCounter: 0,
                     topWidth: 70,
                     bottomWidth: 300,
-                    alpha: 255
+                    alpha: 180
                 });
                 extraLines.push({
                     x: x + random(-50, 50), // Slightly offset from the main line
@@ -163,8 +160,12 @@
         }
 
         function drawLines(linesArray) {
-            for (let ln of linesArray) {
-                let gradient = drawingContext.createLinearGradient(ln.x, 0, ln.x, height);
+            let startX = (width - (lineCount - 1) * 100) / 2; // Start position to center lines at the top
+            for (let i = 0; i < linesArray.length; i++) {
+                let ln = linesArray[i];
+                let bottomX = map(i, 0, linesArray.length - 1, 0, width); // Spread lines at the bottom across the screen width
+
+                let gradient = drawingContext.createLinearGradient(ln.x, 0, bottomX, height);
                 gradient.addColorStop(0, ln.color + ln.alpha.toString(16));
                 gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
                 drawingContext.fillStyle = gradient;
@@ -172,8 +173,8 @@
                 drawingContext.beginPath();
                 drawingContext.moveTo(ln.x - ln.topWidth / 2, 0);
                 drawingContext.lineTo(ln.x + ln.topWidth / 2, 0);
-                drawingContext.lineTo(ln.x + ln.bottomWidth / 2, height);
-                drawingContext.lineTo(ln.x - ln.bottomWidth / 2, height);
+                drawingContext.lineTo(bottomX + ln.bottomWidth / 2, height);
+                drawingContext.lineTo(bottomX - ln.bottomWidth / 2, height);
                 drawingContext.closePath();
                 drawingContext.fill();
             }
@@ -183,12 +184,12 @@
             resizeCanvas(windowWidth, windowHeight);
         }
     </script>
-    <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-bottom mt-4 p-4">
+    <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-bottom mt-6 p-4">
         <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div style="width: 120px;">
+        <div style="width: 130px;">
             <a href="https://ereyes.github.io/s2024/">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="logo" x="0" y="0" style="enable-background:new 0 0 287.5 67.8" version="1.1" viewBox="0 0 287.5 67.8">
                     <g id="swoosh-group">
@@ -230,12 +231,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://ereyes.github.io/s2024/visual_program/rain.html"><i class="fa-solid fa-cloud-rain"></i>&nbsp;rain</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://blog.siggraph.org/2024/06/siggraph-spotlight-episode-78-a-glimpse-into-tomorrow.html/"><i class="fas fa-podcast"></i>&nbsp;podcast</a>
-                </li>
                 </ul>
         </div>
         </div>
     </nav>
 </body>
+</html>
+
 </html>
